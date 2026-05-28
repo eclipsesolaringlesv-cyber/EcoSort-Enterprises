@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>EcoSort Enterprise</title>
+
+  <meta
+    name="description"
+    content="Sistema inteligente de clasificación de residuos con monitoreo SCADA en tiempo real."
+  >
+
+  <!-- FONTS -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- ICONS -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css"> <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/scada.css">
+  <link rel="stylesheet" href="css/showcase.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/animations.css"> <link rel="stylesheet" href="css/effects.css"> <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/loader.css">
+
+</head>
+
+<body>
+
+  <!-- LOADER -->
+
+  <div class="loader">
+
+    <div class="loader-logo">
+
+      <div class="loader-dot"></div>
+
+      <h2>EcoSort</h2>
+
+    </div>
+
+    <div class="loader-ring"></div>
+
+    <div class="loader-text">
+
+      Inicializando sistema...
+
+    </div>
+
+  </div>
+
+
+  <!-- BACKGROUND -->
+
+  <div class="grid-background"></div>
+
+  <div class="noise"></div>
+
+  <div class="blur-orb orb-green"></div>
+
+  <div class="blur-orb orb-blue"></div>
+
+  <canvas id="particles"></canvas>
+
+
+  <!-- SCROLL BAR -->
+
+  <div class="scroll-progress"></div>
+
+
+  <!-- NAVBAR -->
+
+  <header class="navbar glass">
+
+    <div class="logo">
+
+      EcoSort
+
+    </div>
+
+    <nav class="nav-links">
+  <a href="#scada">SCADA Industrial</a>
+  <a href="#technology">Tecnología</a>
+  <a href="#news">Actualizaciones</a> 
+  <a href="#impact">Impacto</a> 
+  <a href="#contact">Contacto</a>
+</nav>
+
+    <div class="nav-right">
+
+      <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+          type="text"
+          placeholder="Buscar..."
+          id="searchInput"
+        >
+
+      </div>
+
+      <button
+        class="nav-btn ripple"
+        data-scroll="#contact"
+      >
+
+        Contacto
+
+      </button>
+
+      <button class="menu-btn">
+
+        <i class="fa-solid fa-bars"></i>
+
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- MOBILE MENU -->
+
+  <div class="mobile-menu">
+ <a href="#scada">SCADA Industrial</a>
+  <a href="#technology">Tecnología</a>
+  <a href="#news">Actualizaciones</a> 
+  <a href="#impact">Impacto</a> 
+  <a href="#contact">Contacto</a>
+
+  </div>
+
+
+  <!-- HERO -->
+
+  <section class="hero fade-page" id="scada">
+
+    <div class="hero-left fade-left">
+
+      <div class="hero-tag">
+
+        Bote de basura inteligente
+
+      </div>
+
+      <h1>
+
+        Clasificación inteligente de residuos.
+
+      </h1>
+
+      <p>
+
+        EcoSort automatiza la separación de residuos mediante sensores industriales y monitoreo SCADA para optimizar reciclaje, eficiencia y sustentabilidad.
+
+      </p>
+
+      <div class="hero-buttons">
+
+        <button
+          class="primary-btn ripple"
+          data-scroll="#showcase"
+        >
+
+          Ver sistema
+
+        </button>
+
+        <button
+          class="secondary-btn"
+          data-scroll="#contact"
+        >
+
+          Solicitar información
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- SCADA -->
+
+    <div class="scada-container glass fade-right">
+
+      <div class="scada-header">
+
+        <div>
+
+          <h3>
+            EcoSort SCADA
+          </h3>
+
+          <p>
+            Sistema industrial en tiempo real
+          </p>
+
+        </div>
+
+        <div class="status-live">
+
+          <span></span>
+
+          ONLINE
+
+        </div>
+
+      </div>
+
+
+      <div class="scada-main">
+
+        <div class="sorting-core">
+
+          <div class="core-ring float"></div>
+
+          <div
+            class="core-center"
+            id="coreCenter"
+          >
+
+            ECOSORT
+
+          </div>
+
+        </div>
+
+
+        <div class="telemetry-panel">
+
+          <div class="telemetry-card">
+
+            <p>Metal</p>
+
+            <h2 id="metalCount">12</h2>
+
+          </div>
+
+          <div class="telemetry-card">
+
+            <p>Húmedo</p>
+
+            <h2 id="wetCount">25</h2>
+
+          </div>
+
+          <div class="telemetry-card">
+
+            <p>Seco</p>
+
+            <h2 id="dryCount">41</h2>
+
+          </div>
+
+          <div class="telemetry-card">
+
+            <p>CO₂ reducido</p>
+
+            <h2 id="co2Count">
+
+              19.08 kg
+
+            </h2>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="scada-buttons">
+
+        <button
+          id="metalBtn"
+          class="metal-btn ripple"
+        >
+
+          ⚙️ Detectar metal
+
+        </button>
+
+        <button
+          id="wetBtn"
+          class="wet-btn ripple"
+        >
+
+          🍎 Detectar húmedo
+
+        </button>
+
+        <button
+          id="dryBtn"
+          class="dry-btn ripple"
+        >
+
+          📄 Detectar seco
+
+        </button>
+
+      </div>
+
+
+      <div class="live-feed">
+
+        <span></span>
+
+        <p id="feedText">
+
+          Sistema operativo.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- NEWS TICKER -->
+
+  <section class="ticker">
+
+    <div class="ticker-track">
+
+      <span>
+        ECOLOGÍA • AUTOMATIZACIÓN • INDUSTRIA 4.0 • RECICLAJE INTELIGENTE • MONITOREO SCADA • SENSORES INDUSTRIALES • TELEMETRÍA • EFICIENCIA EN RESIDUOS •
+      </span>
+
+    </div>
+
+  </section>
+
+
+  <!-- TECHNOLOGY -->
+
+  <section
+    class="technology fade-up"
+    id="technology"
+  >
+
+    <div class="tech-left">
+
+      <div class="section-label">
+
+        TECNOLOGÍA
+
+      </div>
+
+      <h2>
+
+        Un sistema industrial diseñado para el reciclaje moderno.
+
+      </h2>
+
+      <p>
+
+        EcoSort integra sensores inteligentes, monitoreo en tiempo real y automatización avanzada para transformar el manejo de residuos en procesos eficientes y sustentables.
+
+      </p>
+
+    </div>
+
+
+    <div class="tech-right">
+
+      <div class="tech-card glow-card fade-up delay-1">
+
+        <i class="fa-solid fa-microchip"></i>
+
+        <h3>
+          Sensores inteligentes
+        </h3>
+
+        <p>
+          Clasificación automática de residuos mediante detección avanzada.
+        </p>
+
+      </div>
+
+      <div class="tech-card glow-card fade-up delay-2">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <h3>
+          Telemetría industrial
+        </h3>
+
+        <p>
+          Monitoreo de métricas y operación en tiempo real.
+        </p>
+
+      </div>
+
+      <div class="tech-card glow-card fade-up delay-3">
+
+        <i class="fa-solid fa-recycle"></i>
+
+        <h3>
+          Sustentabilidad
+        </h3>
+
+        <p>
+          Reducción de contaminación y mejora del reciclaje.
+        </p>
+
+      </div>
+
+      <div class="tech-card glow-card fade-up delay-4">
+
+        <i class="fa-solid fa-bolt"></i>
+
+        <h3>
+          Operación continua
+        </h3>
+
+        <p>
+          Arquitectura diseñada para funcionamiento 24/7.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SHOWCASE -->
+
+<section class="showcase fade-up" id="showcase">
+
+    <div class="showcase-title">
+      <div class="section-label">
+        SISTEMA
+      </div>
+      <h2>
+        Ingeniería enfocada en automatización sustentable.
+      </h2>
+    </div>
+
+    <div class="showcase-scroll">
+
+      <div class="showcase-card large-card">
+        <img src="assets/scada.jpg">
+        <div class="overlay">
+          <h3>Monitoreo industrial en tiempo real</h3>
+        </div>
+      </div>
+
+      <div class="showcase-card">
+        <img src="assets/sensor.jpg">
+        <div class="overlay">
+          <h3>Sensores de clasificación inteligente</h3>
+        </div>
+      </div>
+
+      <div class="showcase-card">
+        <img src="assets/recycling.jpg">
+        <div class="overlay">
+          <h3>Optimización del reciclaje moderno</h3>
+        </div>
+      </div>
+
+      <div class="showcase-card large-card">
+        <img src="assets/industry.jpg">
+        <div class="overlay">
+          <h3>Tecnología sustentable para industria</h3>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="news" class="reveal" style="margin-top: 80px;">
+      <div class="showcase-title">
+        <div class="section-label" style="background: rgba(34,197,94,0.08); color: #16a34a;">
+          ACTUALIDAD
+        </div>
+        <h2 style="font-size: 2rem; margin-top: 15px;">Últimas Noticias y Actualizaciones</h2>
+      </div>
+
+      <div id="newsContainer" class="news-slider-container" style="position: relative; min-height: 280px; width: 100%; border-radius: 28px; overflow: hidden; background: #ffffff; box-shadow: 0 20px 40px rgba(15,23,42,0.04); padding: 40px; border: 1px solid #e2e8f0;">
+        </div>
+
+      <div id="newsDots" class="news-dots" style="display: flex; justify-content: center; gap: 8px; margin-top: 24px;"></div>
+    </div>
+
+  </section>
+
+
+  <!-- IMPACT -->
+
+  <section
+    class="impact fade-up"
+    id="impact"
+  >
+
+    <div class="impact-card soft-pulse">
+
+      <h2>
+        98%
+      </h2>
+
+      <p>
+        Precisión de clasificación automática.
+      </p>
+
+    </div>
+
+    <div class="impact-card">
+
+      <h2>
+        24/7
+      </h2>
+
+      <p>
+        Operación industrial continua.
+      </p>
+
+    </div>
+
+    <div class="impact-card">
+
+      <h2>
+        +500kg
+      </h2>
+
+      <p>
+        Residuos clasificados correctamente.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INDUSTRIAL BANNER -->
+
+  <section class="industrial-banner image-zoom">
+
+    <img src="assets/banner.jpg">
+
+    <div class="banner-content">
+
+      <div class="section-label">
+
+        ECOSORT ENTERPRISE
+
+      </div>
+
+      <h2>
+
+        Automatización inteligente para un futuro sustentable.
+
+      </h2>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section
+    class="contact fade-up"
+    id="contact"
+  >
+
+    <div class="contact-box glass">
+
+      <div class="section-label">
+
+        CONTACTO
+
+      </div>
+
+      <h2>
+
+        Conecta con EcoSort Enterprise.
+
+      </h2>
+
+      <p>
+
+        Solicita información, seguimiento del proyecto o colaboración empresarial.
+
+      </p>
+
+      <div class="contact-buttons">
+
+        <button
+          id="whatsappBtn"
+          class="primary-btn ripple"
+        >
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+          WhatsApp
+
+        </button>
+
+        <button
+          id="instagramBtn"
+          class="secondary-btn"
+        >
+
+          <i class="fa-brands fa-instagram"></i>
+
+          Instagram
+
+        </button>
+
+        <button
+          id="emailBtn"
+          class="secondary-btn"
+        >
+
+          <i class="fa-solid fa-envelope"></i>
+
+          Correo
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-logo">
+
+      EcoSort Enterprise
+
+    </div>
+
+    <p>
+
+      Sistema inteligente de clasificación de residuos y automatización sustentable.
+
+    </p>
+
+    <div class="footer-socials">
+
+      <i class="fa-brands fa-instagram"></i>
+
+      <i class="fa-brands fa-outlock"></i>
+
+      <i class="fa-brands fa-x-whatsapp"></i>
+
+    </div>
+
+    <div class="footer-copy">
+
+      © 2026 EcoSort Enterprise
+
+    </div>
+
+  </footer>
+
+
+  <!-- JS -->
+
+  <script src="js/main.js"></script>
+  <script src="js/scada.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/news.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/metrics.js"></script> <script src="js/gallery.js"></script>
+  <script src="js/search.js"></script> <script src="js/ui.js"></script> <script src="js/main.js"></script>
+
+  
+</body>
+
+</html>

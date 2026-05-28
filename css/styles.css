@@ -1,0 +1,675 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:'Inter',sans-serif;
+
+  background:#f8fafc;
+
+  color:#0f172a;
+
+  overflow-x:hidden;
+}
+
+
+/* GLOBAL */
+
+section{
+
+  width:100%;
+}
+
+img{
+
+  max-width:100%;
+
+  display:block;
+}
+
+button{
+
+  font-family:'Inter',sans-serif;
+}
+
+a{
+
+  text-decoration:none;
+
+  color:inherit;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  height:82px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:0 50px;
+
+  background:
+  rgba(248,250,252,0.92);
+
+  backdrop-filter:blur(12px);
+
+  border-bottom:
+  1px solid #e2e8f0;
+
+  z-index:9999;
+
+  transition:0.3s;
+}
+
+
+/* LOGO */
+
+.logo{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  font-size:24px;
+
+  font-weight:800;
+
+  color:#0f172a;
+
+  letter-spacing:-1px;
+}
+
+.logo-dot{
+
+  width:12px;
+  height:12px;
+
+  border-radius:50%;
+
+  background:#16a34a;
+}
+
+
+/* NAV */
+
+nav{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:34px;
+}
+
+nav a{
+
+  font-size:14px;
+
+  font-weight:600;
+
+  color:#475569;
+
+  transition:0.3s;
+}
+
+nav a:hover{
+
+  color:#16a34a;
+}
+
+
+/* BUTTON */
+
+.nav-btn{
+
+  padding:14px 22px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:#16a34a;
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.nav-btn:hover{
+
+  background:#15803d;
+
+  transform:translateY(-2px);
+}
+
+
+/* TICKER */
+
+.ticker-section{
+
+  width:100%;
+
+  overflow:hidden;
+
+  background:white;
+
+  border-top:
+  1px solid #e2e8f0;
+
+  border-bottom:
+  1px solid #e2e8f0;
+
+  padding:16px 0;
+}
+
+.ticker-track{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:26px;
+
+  white-space:nowrap;
+
+  width:max-content;
+
+  color:#64748b;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  animation:ticker 28s linear infinite;
+}
+
+@keyframes ticker{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+/* TECHNOLOGY */
+
+.technology{
+
+  padding:100px 50px;
+
+  display:grid;
+
+  grid-template-columns:
+  1fr 1fr;
+
+  gap:60px;
+
+  align-items:center;
+}
+
+.section-mini-title{
+
+  font-size:13px;
+
+  color:#16a34a;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+}
+
+.technology h2{
+
+  font-size:58px;
+
+  line-height:1;
+
+  letter-spacing:-3px;
+
+  margin:
+  22px 0;
+
+  max-width:650px;
+}
+
+.technology p{
+
+  font-size:18px;
+
+  line-height:1.8;
+
+  color:#64748b;
+
+  max-width:580px;
+}
+
+
+/* TECH CARDS */
+
+.tech-right{
+
+  display:grid;
+
+  grid-template-columns:
+  1fr 1fr;
+
+  gap:22px;
+}
+
+.tech-card{
+
+  background:white;
+
+  border:
+  1px solid #e2e8f0;
+
+  border-radius:24px;
+
+  padding:34px;
+
+  transition:0.3s;
+}
+
+.tech-card:hover{
+
+  transform:translateY(-6px);
+
+  border-color:#16a34a;
+}
+
+.tech-card h3{
+
+  font-size:22px;
+
+  margin-bottom:14px;
+}
+
+.tech-card p{
+
+  font-size:15px;
+
+  color:#64748b;
+
+  line-height:1.7;
+}
+
+
+/* SHOWCASE */
+
+.showcase{
+
+  padding:100px 50px;
+}
+
+.showcase-title{
+
+  margin-bottom:40px;
+}
+
+.showcase-title span{
+
+  font-size:13px;
+
+  font-weight:700;
+
+  color:#16a34a;
+
+  letter-spacing:1px;
+}
+
+.showcase-title h2{
+
+  margin-top:18px;
+
+  font-size:54px;
+
+  line-height:1;
+
+  letter-spacing:-3px;
+
+  max-width:700px;
+}
+
+
+/* IMPACT */
+
+.impact{
+
+  padding:100px 50px;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:24px;
+}
+
+.impact-card{
+
+  background:white;
+
+  border:
+  1px solid #e2e8f0;
+
+  border-radius:28px;
+
+  padding:46px;
+}
+
+.impact-card h2{
+
+  font-size:64px;
+
+  color:#16a34a;
+
+  margin-bottom:10px;
+
+  letter-spacing:-2px;
+}
+
+.impact-card p{
+
+  color:#64748b;
+
+  font-size:16px;
+}
+
+
+/* BANNER */
+
+.industrial-banner{
+
+  margin:100px 50px;
+
+  height:70vh;
+
+  border-radius:34px;
+
+  overflow:hidden;
+
+  position:relative;
+
+  background:
+  url('../assets/img/banner.jpg')
+  center/cover no-repeat;
+}
+
+.banner-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  rgba(15,23,42,0.35);
+}
+
+.banner-content{
+
+  position:relative;
+
+  z-index:2;
+
+  height:100%;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  padding:70px;
+}
+
+.banner-content span{
+
+  color:#4ade80;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+}
+
+.banner-content h2{
+
+  margin-top:24px;
+
+  font-size:72px;
+
+  line-height:1;
+
+  color:white;
+
+  max-width:700px;
+
+  letter-spacing:-4px;
+}
+
+
+/* CONTACT */
+
+.contact{
+
+  padding:100px 50px;
+}
+
+.contact-box{
+
+  background:white;
+
+  border:
+  1px solid #e2e8f0;
+
+  border-radius:32px;
+
+  padding:80px;
+
+  text-align:center;
+}
+
+.contact-box span{
+
+  color:#16a34a;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+}
+
+.contact-box h2{
+
+  margin:
+  24px auto 40px;
+
+  max-width:800px;
+
+  font-size:58px;
+
+  line-height:1;
+
+  letter-spacing:-3px;
+}
+
+
+/* FOOTER */
+
+footer{
+
+  padding:70px 50px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  gap:26px;
+
+  border-top:
+  1px solid #e2e8f0;
+
+  background:white;
+}
+
+.footer-logo{
+
+  font-size:28px;
+
+  font-weight:800;
+
+  letter-spacing:-1px;
+}
+
+.footer-socials{
+
+  display:flex;
+
+  gap:18px;
+}
+
+.footer-socials i{
+
+  width:48px;
+
+  height:48px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  background:#f1f5f9;
+
+  color:#0f172a;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.footer-socials i:hover{
+
+  background:#16a34a;
+
+  color:white;
+
+  transform:translateY(-3px);
+}
+
+footer p{
+
+  color:#64748b;
+
+  font-size:14px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+  nav{
+
+    display:none;
+  }
+
+  .technology{
+
+    grid-template-columns:1fr;
+  }
+
+  .impact{
+
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+@media(max-width:700px){
+
+  .navbar{
+
+    padding:0 20px;
+  }
+
+  .technology,
+  .showcase,
+  .impact,
+  .contact{
+
+    padding:80px 20px;
+  }
+
+  .technology h2,
+  .showcase-title h2,
+  .banner-content h2,
+  .contact-box h2{
+
+    font-size:40px;
+
+    letter-spacing:-2px;
+  }
+
+  .tech-right{
+
+    grid-template-columns:1fr;
+  }
+
+  .industrial-banner{
+
+    margin:80px 20px;
+
+    height:55vh;
+  }
+
+  .banner-content{
+
+    padding:30px;
+  }
+
+  .contact-box{
+
+    padding:50px 24px;
+  }
+
+}

@@ -1,0 +1,450 @@
+/* =========================
+   GLOBAL TRANSITIONS
+========================= */
+
+*{
+
+  transition:
+
+  background-color 0.3s ease,
+
+  border-color 0.3s ease,
+
+  color 0.3s ease;
+}
+
+
+/* =========================
+   FADE IN
+========================= */
+
+@keyframes fadeIn{
+
+  from{
+
+    opacity:0;
+  }
+
+  to{
+
+    opacity:1;
+  }
+
+}
+
+
+/* =========================
+   FLOAT
+========================= */
+
+@keyframes floating{
+
+  0%{
+
+    transform:
+    translateY(0px);
+  }
+
+  50%{
+
+    transform:
+    translateY(-12px);
+  }
+
+  100%{
+
+    transform:
+    translateY(0px);
+  }
+
+}
+
+
+.float-animation{
+
+  animation:
+  floating 5s ease-in-out infinite;
+}
+
+
+/* =========================
+   PULSE
+========================= */
+
+@keyframes pulse{
+
+  0%{
+
+    transform:scale(1);
+
+    opacity:1;
+  }
+
+  50%{
+
+    transform:scale(1.06);
+
+    opacity:0.8;
+  }
+
+  100%{
+
+    transform:scale(1);
+
+    opacity:1;
+  }
+
+}
+
+
+.pulse{
+
+  animation:
+  pulse 2s infinite;
+}
+
+
+/* =========================
+   GLOW
+========================= */
+
+@keyframes glow{
+
+  0%{
+
+    box-shadow:
+    0 0 0 rgba(34,197,94,0);
+  }
+
+  50%{
+
+    box-shadow:
+    0 0 25px rgba(34,197,94,0.25);
+  }
+
+  100%{
+
+    box-shadow:
+    0 0 0 rgba(34,197,94,0);
+  }
+
+}
+
+
+.glow{
+
+  animation:
+  glow 2.5s infinite;
+}
+
+
+/* =========================
+   SCAN LINE
+========================= */
+
+@keyframes scanLine{
+
+  0%{
+
+    transform:
+    translateY(-100%);
+  }
+
+  100%{
+
+    transform:
+    translateY(200%);
+  }
+
+}
+
+
+.scada-container::before{
+
+  animation:
+  scanLine 8s linear infinite;
+}
+
+
+/* =========================
+   BUTTON PRESS
+========================= */
+
+button:active{
+
+  transform:
+  scale(0.97);
+}
+
+
+/* =========================
+   HOVER LIFT
+========================= */
+
+.hover-lift{
+
+  transition:
+  transform 0.4s ease,
+  box-shadow 0.4s ease;
+}
+
+
+.hover-lift:hover{
+
+  transform:
+  translateY(-8px);
+
+  box-shadow:
+  0 25px 45px rgba(15,23,42,0.12);
+}
+
+
+/* =========================
+   CARD APPEAR
+========================= */
+
+@keyframes cardAppear{
+
+  from{
+
+    opacity:0;
+
+    transform:
+    translateY(40px);
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+  }
+
+}
+
+
+.tech-card,
+.telemetry-card,
+.impact-card{
+
+  animation:
+  cardAppear 1s ease;
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal{
+
+  opacity:0;
+
+  transform:
+  translateY(60px);
+
+  transition:
+  1s ease;
+}
+
+
+.reveal.active{
+
+  opacity:1;
+
+  transform:
+  translateY(0);
+}
+
+
+/* =========================
+   TEXT SHIMMER
+========================= */
+
+@keyframes shimmer{
+
+  0%{
+
+    background-position:
+    -200% center;
+  }
+
+  100%{
+
+    background-position:
+    200% center;
+  }
+
+}
+
+
+.shimmer{
+
+  background:
+
+  linear-gradient(
+    90deg,
+    #0f172a,
+    #16a34a,
+    #0f172a
+  );
+
+  background-size:
+  200% auto;
+
+  color:transparent;
+
+  background-clip:text;
+
+  -webkit-background-clip:text;
+
+  animation:
+  shimmer 4s linear infinite;
+}
+
+
+/* =========================
+   ROTATION
+========================= */
+
+@keyframes rotateSlow{
+
+  from{
+
+    transform:
+    rotate(0deg);
+  }
+
+  to{
+
+    transform:
+    rotate(360deg);
+  }
+
+}
+
+
+.rotate-slow{
+
+  animation:
+  rotateSlow 20s linear infinite;
+}
+
+
+/* =========================
+   LIVE DOT
+========================= */
+
+@keyframes liveDot{
+
+  0%{
+
+    transform:scale(1);
+
+    opacity:1;
+  }
+
+  50%{
+
+    transform:scale(1.4);
+
+    opacity:0.5;
+  }
+
+  100%{
+
+    transform:scale(1);
+
+    opacity:1;
+  }
+
+}
+
+
+.live-dot{
+
+  animation:
+  liveDot 1.2s infinite;
+}
+
+
+/* =========================
+   HERO PARALLAX
+========================= */
+
+.hero{
+
+  perspective:1000px;
+}
+
+
+.scada-container{
+
+  transform-style:
+  preserve-3d;
+}
+
+
+/* =========================
+   IMAGE FADE
+========================= */
+
+.showcase-card img{
+
+  animation:
+  fadeIn 1.2s ease;
+}
+
+
+/* =========================
+   MENU ANIMATION
+========================= */
+
+.mobile-menu{
+
+  transition:
+  right 0.45s ease,
+  opacity 0.45s ease;
+}
+
+
+/* =========================
+   LOADER
+========================= */
+
+.loader{
+
+  animation:
+  fadeIn 0.6s ease;
+}
+
+
+/* =========================
+   PERFORMANCE
+========================= */
+
+.tech-card,
+.telemetry-card,
+.showcase-card,
+button{
+
+  will-change:
+  transform;
+}
+
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media(max-width:700px){
+
+  .float-animation,
+  .rotate-slow{
+
+    animation-duration:
+    10s;
+  }
+
+}

@@ -1,0 +1,556 @@
+/* SHOWCASE */
+
+.showcase{
+
+  overflow:hidden;
+}
+
+
+/* TITLE */
+
+.showcase-title{
+
+  margin-bottom:60px;
+
+  max-width:800px;
+}
+
+
+/* SCROLL AREA */
+
+.showcase-scroll{
+
+  display:flex;
+
+  gap:26px;
+
+  overflow-x:auto;
+
+  padding-bottom:20px;
+
+  scroll-snap-type:x mandatory;
+
+  scrollbar-width:none;
+}
+
+
+.showcase-scroll::-webkit-scrollbar{
+
+  display:none;
+}
+
+
+/* CARD */
+
+.showcase-card{
+
+  position:relative;
+
+  min-width:420px;
+
+  height:520px;
+
+  border-radius:34px;
+
+  overflow:hidden;
+
+  flex-shrink:0;
+
+  scroll-snap-align:start;
+
+  background:#e2e8f0;
+
+  box-shadow:
+  0 24px 50px rgba(15,23,42,0.08);
+
+  transition:
+  transform 0.5s ease,
+  box-shadow 0.5s ease;
+}
+
+
+/* LARGE */
+
+.large-card{
+
+  min-width:620px;
+}
+
+
+/* IMAGE */
+
+.showcase-card img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:
+  transform 0.7s ease;
+}
+
+
+/* OVERLAY */
+
+.overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  padding:34px;
+
+  background:
+
+  linear-gradient(
+    to top,
+    rgba(15,23,42,0.72),
+    rgba(15,23,42,0.12),
+    transparent
+  );
+}
+
+
+.overlay h3{
+
+  color:white;
+
+  font-size:2rem;
+
+  line-height:1.1;
+
+  max-width:340px;
+
+  font-weight:800;
+
+  letter-spacing:-1px;
+}
+
+
+/* HOVER */
+
+.showcase-card:hover{
+
+  transform:
+  translateY(-10px);
+
+  box-shadow:
+  0 40px 80px rgba(15,23,42,0.12);
+}
+
+
+.showcase-card:hover img{
+
+  transform:scale(1.08);
+}
+
+
+/* TECHNOLOGY */
+
+.technology{
+
+  display:grid;
+
+  grid-template-columns:
+  1fr 1fr;
+
+  gap:70px;
+
+  align-items:start;
+}
+
+
+/* LEFT */
+
+.tech-left{
+
+  max-width:620px;
+}
+
+
+.tech-left h2{
+
+  margin-bottom:28px;
+}
+
+
+.tech-left p{
+
+  font-size:1.08rem;
+}
+
+
+/* RIGHT */
+
+.tech-right{
+
+  display:grid;
+
+  grid-template-columns:
+  1fr 1fr;
+
+  gap:22px;
+}
+
+
+/* TECH CARD */
+
+.tech-card{
+
+  position:relative;
+
+  background:
+  rgba(255,255,255,0.72);
+
+  border:
+  1px solid rgba(226,232,240,0.8);
+
+  padding:34px;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  transition:
+  transform 0.4s ease,
+  box-shadow 0.4s ease;
+}
+
+
+.tech-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:5px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #22c55e,
+    #16a34a
+  );
+}
+
+
+/* ICON */
+
+.tech-card i{
+
+  width:74px;
+  height:74px;
+
+  border-radius:22px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  font-size:1.6rem;
+
+  color:#16a34a;
+
+  background:
+  rgba(34,197,94,0.08);
+
+  margin-bottom:24px;
+}
+
+
+/* TEXT */
+
+.tech-card h3{
+
+  margin-bottom:16px;
+
+  font-size:1.25rem;
+}
+
+
+.tech-card p{
+
+  color:#64748b;
+}
+
+
+/* HOVER */
+
+.tech-card:hover{
+
+  transform:
+  translateY(-8px);
+
+  box-shadow:
+  0 25px 50px rgba(15,23,42,0.08);
+}
+
+
+/* IMPACT */
+
+.impact{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:26px;
+}
+
+
+/* IMPACT CARD */
+
+.impact-card{
+
+  position:relative;
+
+  background:
+  linear-gradient(
+    145deg,
+    #0f172a,
+    #111827
+  );
+
+  border-radius:34px;
+
+  padding:60px 40px;
+
+  overflow:hidden;
+
+  color:white;
+
+  box-shadow:
+  0 24px 50px rgba(15,23,42,0.12);
+}
+
+
+.impact-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+  radial-gradient(
+    circle at top right,
+    rgba(34,197,94,0.18),
+    transparent 45%
+  );
+}
+
+
+/* NUMBERS */
+
+.impact-card h2{
+
+  font-size:4rem;
+
+  color:#4ade80;
+
+  margin-bottom:20px;
+}
+
+
+.impact-card p{
+
+  color:#cbd5e1;
+
+  font-size:1rem;
+}
+
+
+/* INDUSTRIAL BANNER */
+
+.industrial-banner{
+
+  position:relative;
+
+  height:680px;
+
+  overflow:hidden;
+
+  border-radius:42px;
+
+  margin:
+  0 7%;
+}
+
+
+.industrial-banner img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:
+  transform 1.2s ease;
+}
+
+
+/* BANNER CONTENT */
+
+.banner-content{
+
+  position:absolute;
+
+  left:80px;
+  bottom:80px;
+
+  max-width:720px;
+}
+
+
+.banner-content h2{
+
+  color:white;
+
+  margin-top:20px;
+}
+
+
+/* HOVER */
+
+.industrial-banner:hover img{
+
+  transform:scale(1.06);
+}
+
+
+/* CONTACT */
+
+.contact{
+
+  display:flex;
+
+  justify-content:center;
+}
+
+
+/* CONTACT BOX */
+
+.contact-box{
+
+  width:100%;
+
+  max-width:900px;
+
+  padding:70px;
+
+  border-radius:40px;
+
+  text-align:center;
+
+  box-shadow:
+  0 24px 60px rgba(15,23,42,0.08);
+}
+
+
+.contact-box h2{
+
+  margin:
+  20px 0;
+}
+
+
+.contact-buttons{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:18px;
+
+  margin-top:40px;
+
+  flex-wrap:wrap;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+  .technology{
+
+    grid-template-columns:
+    1fr;
+  }
+
+  .impact{
+
+    grid-template-columns:
+    1fr;
+  }
+
+}
+
+
+@media(max-width:700px){
+
+  .showcase-card{
+
+    min-width:85%;
+    height:420px;
+  }
+
+  .large-card{
+
+    min-width:85%;
+  }
+
+  .overlay h3{
+
+    font-size:1.5rem;
+  }
+
+  .tech-right{
+
+    grid-template-columns:
+    1fr;
+  }
+
+  .industrial-banner{
+
+    height:520px;
+
+    margin:
+    0 5%;
+
+    border-radius:28px;
+  }
+
+  .banner-content{
+
+    left:30px;
+    bottom:30px;
+  }
+
+  .contact-box{
+
+    padding:40px 24px;
+
+    border-radius:28px;
+  }
+
+  .contact-buttons{
+
+    flex-direction:column;
+  }
+
+}

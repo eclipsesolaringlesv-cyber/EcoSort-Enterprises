@@ -1,0 +1,500 @@
+/* =========================
+   LARGE SCREENS
+========================= */
+
+@media(max-width:1400px){
+
+  .hero{
+
+    gap:40px;
+  }
+
+  .showcase-card{
+
+    min-width:380px;
+  }
+
+  .large-card{
+
+    min-width:560px;
+  }
+
+}
+
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media(max-width:1200px){
+
+  .hero{
+
+    grid-template-columns:
+    1fr;
+
+    gap:70px;
+
+    text-align:center;
+  }
+
+  .hero-left{
+
+    margin:auto;
+  }
+
+  .hero-buttons{
+
+    justify-content:center;
+  }
+
+  .scada-container{
+
+    margin:auto;
+  }
+
+  .technology{
+
+    grid-template-columns:
+    1fr;
+
+    gap:50px;
+  }
+
+  .tech-left{
+
+    max-width:100%;
+  }
+
+  .impact{
+
+    grid-template-columns:
+    1fr;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+  section{
+
+    padding:
+    90px 6%;
+  }
+
+  .navbar{
+
+    width:94%;
+  }
+
+  .search-box{
+
+    display:none;
+  }
+
+  nav{
+
+    display:none;
+  }
+
+  .menu-btn{
+
+    display:flex;
+  }
+
+  .hero{
+
+    padding-top:140px;
+  }
+
+  .hero h1{
+
+    max-width:100%;
+  }
+
+  .scada-main{
+
+    grid-template-columns:
+    1fr;
+
+    gap:30px;
+  }
+
+  .telemetry-panel{
+
+    grid-template-columns:
+    1fr 1fr;
+  }
+
+  .showcase-scroll{
+
+    gap:20px;
+  }
+
+  .industrial-banner{
+
+    height:560px;
+  }
+
+  .banner-content{
+
+    left:40px;
+    bottom:40px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  body{
+
+    overflow-x:hidden;
+  }
+
+  section{
+
+    padding:
+    80px 5%;
+  }
+
+  .navbar{
+
+    top:12px;
+
+    height:70px;
+
+    border-radius:20px;
+
+    padding:
+    0 16px;
+  }
+
+  .logo{
+
+    font-size:1.3rem;
+  }
+
+  .nav-btn{
+
+    display:none;
+  }
+
+  .hero{
+
+    min-height:auto;
+
+    padding-top:130px;
+
+    gap:50px;
+  }
+
+  .hero-tag{
+
+    font-size:0.72rem;
+
+    padding:
+    10px 16px;
+  }
+
+  .hero h1{
+
+    font-size:
+    clamp(2.8rem,12vw,4rem);
+
+    line-height:0.95;
+  }
+
+  .hero p{
+
+    font-size:0.98rem;
+  }
+
+  .hero-buttons{
+
+    flex-direction:column;
+
+    width:100%;
+  }
+
+  .primary-btn,
+  .secondary-btn{
+
+    width:100%;
+  }
+
+  .scada-container{
+
+    padding:22px;
+
+    border-radius:26px;
+  }
+
+  .sorting-core{
+
+    width:220px;
+    height:220px;
+  }
+
+  .core-center{
+
+    width:140px;
+    height:140px;
+
+    font-size:1rem;
+  }
+
+  .telemetry-panel{
+
+    grid-template-columns:
+    1fr;
+  }
+
+  .telemetry-card{
+
+    padding:20px;
+  }
+
+  .telemetry-card h2{
+
+    font-size:1.8rem;
+  }
+
+  .scada-buttons{
+
+    grid-template-columns:
+    1fr;
+  }
+
+  .scada-buttons button{
+
+    height:58px;
+
+    font-size:0.9rem;
+  }
+
+  .live-feed{
+
+    height:auto;
+
+    padding:
+    18px;
+  }
+
+  .technology{
+
+    gap:40px;
+  }
+
+  .tech-right{
+
+    grid-template-columns:
+    1fr;
+  }
+
+  .tech-card{
+
+    padding:28px;
+  }
+
+  .showcase-card{
+
+    min-width:88%;
+
+    height:400px;
+
+    border-radius:28px;
+  }
+
+  .large-card{
+
+    min-width:88%;
+  }
+
+  .overlay{
+
+    padding:24px;
+  }
+
+  .overlay h3{
+
+    font-size:1.45rem;
+  }
+
+  .impact-card{
+
+    padding:45px 28px;
+
+    border-radius:28px;
+  }
+
+  .impact-card h2{
+
+    font-size:3rem;
+  }
+
+  .industrial-banner{
+
+    height:480px;
+
+    border-radius:28px;
+
+    margin:
+    0 5%;
+  }
+
+  .banner-content{
+
+    left:24px;
+    bottom:24px;
+
+    max-width:90%;
+  }
+
+  .contact-box{
+
+    padding:40px 22px;
+
+    border-radius:28px;
+  }
+
+  .contact-buttons{
+
+    flex-direction:column;
+  }
+
+  .mobile-menu a{
+
+    font-size:1.6rem;
+  }
+
+  footer{
+
+    padding:
+    70px 5%;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  h1{
+
+    font-size:
+    clamp(2.4rem,13vw,3.2rem);
+  }
+
+  h2{
+
+    font-size:
+    clamp(2rem,10vw,2.8rem);
+  }
+
+  p{
+
+    font-size:0.95rem;
+  }
+
+  .navbar{
+
+    height:66px;
+  }
+
+  .menu-btn{
+
+    width:46px;
+    height:46px;
+
+    border-radius:14px;
+  }
+
+  .hero{
+
+    padding-top:120px;
+  }
+
+  .sorting-core{
+
+    width:190px;
+    height:190px;
+  }
+
+  .core-center{
+
+    width:120px;
+    height:120px;
+
+    font-size:0.9rem;
+  }
+
+  .core-ring{
+
+    border-width:10px;
+  }
+
+  .showcase-card{
+
+    height:340px;
+  }
+
+  .overlay h3{
+
+    font-size:1.2rem;
+  }
+
+  .impact-card h2{
+
+    font-size:2.5rem;
+  }
+
+  .footer-socials{
+
+    gap:14px;
+  }
+
+  .footer-socials i{
+
+    width:46px;
+    height:46px;
+  }
+
+}
+
+
+/* =========================
+   LANDSCAPE MOBILE
+========================= */
+
+@media(max-height:600px)
+and (orientation:landscape){
+
+  .hero{
+
+    min-height:auto;
+  }
+
+  .mobile-menu{
+
+    gap:20px;
+  }
+
+  .mobile-menu a{
+
+    font-size:1.3rem;
+  }
+
+}
