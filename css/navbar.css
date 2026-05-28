@@ -1,36 +1,32 @@
 /* NAVBAR */
 
-.navbar{
+/* =========================================================
+   CORRECCIÓN CRÍTICA DE ANCHO PARA LA NAVBAR (MÓVIL Y PC)
+========================================================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  /* CAMBIO CLAVE: Usamos 100% con box-sizing para que los paddings no sumen ancho extra */
+  width: 100% !important; 
+  box-sizing: border-box !important;
+  
+  /* Ajusta los paddings de los lados para que en móvil respire mejor */
+  padding: 12px 5% !important; 
+  
+  /* Asegura que no se desfase en pantallas táctiles */
+  max-width: 100vw !important;
+  margin: 0 !important;
+  z-index: 1000;
+}
 
-  position:fixed;
-
-  top:18px;
-  left:50%;
-
-  transform:
-  translateX(-50%);
-
-  width:92%;
-
-  max-width:1450px;
-
-  height:82px;
-
-  padding:
-  0 28px;
-
-  border-radius:28px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  z-index:9999;
-
-  transition:
-  0.4s ease;
+/* Por si acaso el desborde viene del contenedor de la derecha (búsqueda y botones) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 100%;
 }
 
 
