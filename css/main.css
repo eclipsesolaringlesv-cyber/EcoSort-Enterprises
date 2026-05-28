@@ -485,3 +485,15 @@ footer{
   }
 
 }
+/* REGULARES DE SEGURIDAD ANTIDESBORDE MÓVIL */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Corta drásticamente cualquier elemento que intente salirse de la pantalla */
+  position: relative;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit; /* Asegura que los paddings no sumen ancho extra al 100% */
+}
